@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Photo Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- animsition.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/css/animsition.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  <body class="animsition">
+      <header>
+        <form>
+          <input id="search-images" name="search" placeholder="search images" type="text" data-list=".list" data-toggle="hideseek">
+        </form>
+      </header>
+      <main>
+        <!-- Begin Photo Gallery -->
+          <ul class="photo-gallery list">
+            <li>
+              <p>I love hay bales. Took this snap on a drive through the countryside past some straw fields.</p>
+              <a href="photos/01.jpg"><img src="photos/thumbnails/01.jpg" title="Hay Bales" alt="I love hay bales. Took this snap on a drive through the countryside past some straw fields." /></a>
+            </li>
+            <li>
+              <p>The lake was so calm today. We had a great view of the snow on the mountains from here.</p>
+              <a href="photos/02.jpg"><img src="photos/thumbnails/02.jpg" title="Lake" alt="The lake was so calm today. We had a great view of the snow on the mountains from here." /></a>
+            </li>
+            <li>
+              <p>I hiked to the top of the mountain and got this picture of the canyon and trees below.</p>
+              <a href="photos/03.jpg"><img src="photos/thumbnails/03.jpg" title="Canyon" alt="I hiked to the top of the mountain and got this picture of the canyon and trees below." /></a>
+            </li>
+            <li>
+              <p>It was amazing to see an iceberg up close, it was so cold but didn’t snow today.</p>
+              <a href="photos/04.jpg"><img src="photos/thumbnails/04.jpg" title="Iceberg" alt="It was amazing to see an iceberg up close, it was so cold but didn’t snow today." /></a>
+            </li>
+            <li>
+              <p>The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.</p>
+              <a href="photos/05.jpg"><img src="photos/thumbnails/05.jpg" title="Desert" alt="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons." /></a>
+            </li>
+            <li>
+              <p>Fall is coming, I love when the leaves on the trees start to change color.</p>
+              <a href="photos/06.jpg"><img src="photos/thumbnails/06.jpg" title="Fall" alt="Fall is coming, I love when the leaves on the trees start to change color." /></a>
+            </li>
+            <li>
+              <p>I drove past this plantation yesterday, everything is so green!</p>
+              <a href="photos/07.jpg"><img src="photos/thumbnails/07.jpg" title="Plantation" alt="I drove past this plantation yesterday, everything is so green!" /></a>
+            </li>
+            <li>
+              <p>My summer vacation to the Oregon Coast. I love the sandy dunes!</p>
+              <a href="photos/08.jpg"><img src="photos/thumbnails/08.jpg" title="Dunes" alt="My summer vacation to the Oregon Coast. I love the sandy dunes!" /></a>
+            </li>
+            <li>
+              <p>We enjoyed a quiet stroll down this countryside lane.</p>
+              <a href="photos/09.jpg"><img src="photos/thumbnails/08.jpg" title="Countryside Lane" alt="We enjoyed a quiet stroll down this countryside lane." /></a>
+            </li>
+            <li>
+              <p>Sunset at the coast! The sky turned a lovely shade of orange.</p>
+              <a href="photos/10.jpg"><img src="photos/thumbnails/10.jpg" title="Sunset" alt="Sunset at the coast! The sky turned a lovely shade of orange." /></a>
+            </li>
+            <li>
+              <p>I did a tour of a cave today and the view of the landscape below was breathtaking.</p>
+              <a href="photos/11.jpg"><img src="photos/thumbnails/11.jpg" title="Cave" alt="I did a tour of a cave today and the view of the landscape below was breathtaking." /></a>
+            </li>
+            <li>
+              <p>I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.</p>
+              <a href="photos/12.jpg"><img src="photos/thumbnails/12.jpg" title="Bluebells" alt="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in." /></a>
+            </li>
+          </ul>
+      </main>
+      <script src="http://code.jquery.com/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
+      <!-- animsition.js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/js/animsition.min.js"></script>
+      <script type="text/javascript" src="sitejs/jquery.hideseek.min.js"></script>
+      <script src="sitejs/app.js" type="text/javascript" charset="utf-8"></script>
+      <script>
+        $('#search-images').hideseek({
+          attribute: 'text'
+        });
+      </script>
+  </body>
+</html>

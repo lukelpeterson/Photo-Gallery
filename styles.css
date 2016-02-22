@@ -5,17 +5,19 @@ body {
   font-family: 'Lekton', sans-serif;
   color: #555;
   text-align:center;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 a link {
   cursor: pointer;
 }
 header {
-  align-content: center;
   margin: 2em auto;
   padding: 1em 2em;
 }
 main {
+  width: 100%;
   max-width: 980px;
   margin: auto;
 }
@@ -33,26 +35,27 @@ img {
   max-width: 980px;
 }
 ul {
-  decoration: none;
   margin: 0;
   padding: 0;
+  list-style: none;
+}
 
-}
-button {
-  align-items: center;
-  background: transparent;
-  margin: 15% 5% 0;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  padding: 1em;
-  color: #fff;
-  font-size: 4em;
-}
 .list p {
   display: none;
 }
+
 /* Gallery Styles */
+
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.photo-gallery li {
+  margin-bottom: 60px;
+  text-align: center;
+}
 
 .photo-gallery li img {
   -webkit-filter: grayscale(100%);
@@ -71,17 +74,7 @@ button {
   -o-transition: .5s ease-in-out;
 }
 
-.photo-gallery li {
-  display: inline-block;
-  margin: 0 60px 60px 0;
-  float: left;
-}
-.photo-gallery li:nth-child(4n+1) {
-  clear: left;
-}
-.photo-gallery li:nth-child(4n+0) {
-  margin-right: 0;
-}
+/* lightbox styles */
 
 #overlay {
   background:rgba(0,0,0,0.8);
@@ -92,22 +85,61 @@ button {
   left: 0;
   display: none;
 }
+.gallery-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 980px;
+  text-align: center;
+  margin: auto;
+}
+
 #overlay img {
+  width: 100%;
   max-width: 750px;
-  margin-top: 5%;
+  height: auto;
+  margin: 5% 0;
 }
 #overlay p {
+  display: block;
   color: #eee;
+  width: 100%;
   max-width: 600px;
-  margin: 1em auto;
+  margin: 0 auto;
   text-align: left;
   line-height: 1.5;
 }
 
-#next {
-  float: right;
-
+/* Navigation */
+button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 4em;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 #previous {
-  float: left;
+  order: -1;
 }
+
+  @media (max-width: 895px) {
+    .gallery-container {
+      clear: both;
+      display: block;
+    }
+    #overlay p {
+      padding: 5%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .photo-gallery {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }

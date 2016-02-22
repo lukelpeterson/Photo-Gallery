@@ -1,25 +1,28 @@
 // Add light box to Gallery
 
 var $overlay = $('<div id="overlay" class="animsition"></div>');
-var $image = $("<img class='animsition'>");
+var $image = $("<img class='animsition lightbox-open'>");
 var $caption = $("<p class='animsition'></p>");
-var $previous = $('<button id="previous"><</button>');
-var $next = $('<button id="next">></button>');
+var $previous = $('<button class="lightbox-open" id="previous"><</button>');
+var $next = $('<button class="lightbox-open" id="next">></button>');
 
-$('img').addClass('animsition');
+$('img').addClass('animisition');
 
 // Add image to overlay
 $overlay.append($image);
 
 // Add overlay
-$("body").append($overlay);
+$("body").append($overlay)
 
 // Add Caption
 $overlay.append($caption);
 
 // Add Next and Previous
-$image.before($previous);
-$image.after($next);
+$overlay.append($previous);
+$overlay.append($next);
+
+// container for image and navigation
+$( ".lightbox-open" ).wrapAll( "<div class='gallery-container' />");
 
 // Click event link to image
 $(".photo-gallery a").click(function(event){
@@ -34,6 +37,7 @@ $(".photo-gallery a").click(function(event){
   var captionText = $(this).children("img").attr("alt");
   $caption.text(captionText);
 });
+
 
 
 // Get Next Image

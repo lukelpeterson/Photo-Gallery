@@ -12,7 +12,7 @@ $('img').addClass('animisition');
 $overlay.append($image);
 
 // Add overlay
-$("body").append($overlay)
+$("body").append($overlay);
 
 // Add Caption
 $overlay.append($caption);
@@ -78,7 +78,7 @@ function getPrevImage() {
 
 }
 // Close overlay when clicked
-$overlay.click(function(){
+$overlay.click(function(event){
     //Hide overlay
     if(event.target.id == "overlay")
     $overlay.hide();
